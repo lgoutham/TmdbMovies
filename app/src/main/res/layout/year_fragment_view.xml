@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_default_dimen_10px"
+        android:text="@string/movie_released_in"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/global_default_text_20px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_default_dimen_140px"
+        android:layout_below="@id/divider" />
+
+</RelativeLayout>

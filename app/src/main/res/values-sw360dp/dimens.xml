@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- default dimens * 0.75 -->
+<resources>
+    <!-- global default dimens -->
+    <dimen name="global_default_dimen_1px">0.75dp</dimen>
+    <dimen name="global_default_dimen_2px">1.5dp</dimen>
+    <dimen name="global_default_dimen_3px">2.25dp</dimen>
+    <dimen name="global_default_dimen_4px">3dp</dimen>
+    <dimen name="global_default_dimen_5px">3.75dp</dimen>
+    <dimen name="global_default_dimen_6px">4.5dp</dimen>
+    <dimen name="global_default_dimen_7px">5.25dp</dimen>
+    <dimen name="global_default_dimen_8px">6dp</dimen>
+    <dimen name="global_default_dimen_9px">6.75dp</dimen>
+    <dimen name="global_default_dimen_10px">7.5dp</dimen>
+    <dimen name="global_default_dimen_11px">8.25dp</dimen>
+    <dimen name="global_default_dimen_12px">9dp</dimen>
+    <dimen name="global_default_dimen_13px">9.75dp</dimen>
+    <dimen name="global_default_dimen_14px">10.5dp</dimen>
+    <dimen name="global_default_dimen_15px">11.25dp</dimen>
+    <dimen name="global_default_dimen_16px">12dp</dimen>
+    <dimen name="global_default_dimen_17px">12.75dp</dimen>
+    <dimen name="global_default_dimen_18px">13.5dp</dimen>
+    <dimen name="global_default_dimen_19px">14.25dp</dimen>
+    <dimen name="global_default_dimen_20px">15dp</dimen>
+    <dimen name="global_default_dimen_21px">15.75dp</dimen>
+    <dimen name="global_default_dimen_22px">16.5dp</dimen>
+    <dimen name="global_default_dimen_23px">17.25dp</dimen>
+    <dimen name="global_default_dimen_24px">18dp</dimen>
+    <dimen name="global_default_dimen_25px">18.75dp</dimen>
+    <dimen name="global_default_dimen_26px">20.5dp</dimen>
+    <dimen name="global_default_dimen_27px">20.25dp</dimen>
+    <dimen name="global_default_dimen_28px">21dp</dimen>
+    <dimen name="global_default_dimen_29px">21.75dp</dimen>
+    <dimen name="global_default_dimen_30px">22.5dp</dimen>
+
+    <!-- global default widths and heights -->
+    <dimen name="global_default_dimen_40px">30dp</dimen>
+    <dimen name="global_default_dimen_50px">37.5dp</dimen>
+    <dimen name="global_default_dimen_60px">45dp</dimen>
+    <dimen name="global_default_dimen_70px">52.5dp</dimen>
+    <dimen name="global_default_dimen_80px">60dp</dimen>
+    <dimen name="global_default_dimen_90px">67.5dp</dimen>
+    <dimen name="global_default_dimen_100px">75dp</dimen>
+    <dimen name="global_default_dimen_120px">90dp</dimen>
+    <dimen name="global_default_dimen_140px">105dp</dimen>
+    <dimen name="global_default_dimen_160px">120dp</dimen>
+    <dimen name="global_default_dimen_180px">135dp</dimen>
+    <dimen name="global_default_dimen_200px">150dp</dimen>
+    <dimen name="global_default_dimen_220px">165dp</dimen>
+    <dimen name="global_default_dimen_240px">180dp</dimen>
+    <dimen name="global_default_dimen_260px">195dp</dimen>
+    <dimen name="global_default_dimen_280px">210dp</dimen>
+    <dimen name="global_default_dimen_300px">225dp</dimen>
+    <dimen name="global_default_dimen_320px">240dp</dimen>
+    <dimen name="global_default_dimen_340px">255dp</dimen>
+    <dimen name="global_default_dimen_360px">270dp</dimen>
+    <dimen name="global_default_dimen_380px">285dp</dimen>
+    <dimen name="global_default_dimen_400px">300dp</dimen>
+    <dimen name="global_default_dimen_420px">315dp</dimen>
+    <dimen name="global_default_dimen_440px">330dp</dimen>
+    <dimen name="global_default_dimen_460px">345dp</dimen>
+    <dimen name="global_default_dimen_480px">360dp</dimen>
+    <dimen name="global_default_dimen_500px">375dp</dimen>
+
+    <!-- global default text sizes -->
+    <dimen name="global_default_text_10px">7.5sp</dimen>
+    <dimen name="global_default_text_11px">8.25sp</dimen>
+    <dimen name="global_default_text_12px">9sp</dimen>
+    <dimen name="global_default_text_13px">9.75sp</dimen>
+    <dimen name="global_default_text_14px">10.5sp</dimen>
+    <dimen name="global_default_text_15px">11.25sp</dimen>
+    <dimen name="global_default_text_16px">12sp</dimen>
+    <dimen name="global_default_text_17px">12.75sp</dimen>
+    <dimen name="global_default_text_18px">13.5sp</dimen>
+    <dimen name="global_default_text_19px">14.25sp</dimen>
+    <dimen name="global_default_text_20px">15sp</dimen>
+    <dimen name="global_default_text_21px">15.75sp</dimen>
+    <dimen name="global_default_text_22px">16.5sp</dimen>
+    <dimen name="global_default_text_23px">17.25sp</dimen>
+    <dimen name="global_default_text_24px">18sp</dimen>
+    <dimen name="global_default_text_25px">18.75sp</dimen>
+    <dimen name="global_default_text_26px">20.5sp</dimen>
+    <dimen name="global_default_text_27px">20.25sp</dimen>
+    <dimen name="global_default_text_28px">21sp</dimen>
+    <dimen name="global_default_text_29px">21.75sp</dimen>
+    <dimen name="global_default_text_30px">22.5sp</dimen>
+    <dimen name="global_default_text_31px">23.25sp</dimen>
+    <dimen name="global_default_text_32px">24sp</dimen>
+    <dimen name="global_default_text_33px">24.75sp</dimen>
+    <dimen name="global_default_text_34px">25.5sp</dimen>
+    <dimen name="global_default_text_35px">26.25sp</dimen>
+    <dimen name="global_default_text_36px">27sp</dimen>
+    <dimen name="global_default_text_37px">27.75sp</dimen>
+    <dimen name="global_default_text_38px">28.5sp</dimen>
+    <dimen name="global_default_text_39px">29.25sp</dimen>
+    <dimen name="global_default_text_40px">30sp</dimen>
+    <dimen name="global_default_text_41px">30.75sp</dimen>
+
+    <!-- ISplashView-->
+    <dimen name="splash_view_margin">9dp</dimen>
+    <dimen name="splash_view_padding">22.5dp</dimen>
+</resources>

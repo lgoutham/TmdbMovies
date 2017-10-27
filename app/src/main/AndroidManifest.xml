@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.greddy.movies">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Movies">
+        <activity
+            android:name=".home.TmdbActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Movies">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".moviedetails.MovieDetailsActivity"
+            android:label=""
+            android:parentActivityName=".home.TmdbActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Movies.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.TmdbActivity" />
+        </activity>
+
+        <activity
+            android:name=".tvseriesdetail.TvSeriesDetailsActivity"
+            android:parentActivityName=".home.TmdbActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Movies.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".home.TmdbActivity" />
+        </activity>
+        <activity
+            android:name=".tvseriesdetail.episode.TvSeriesEpisodeFragment"
+            android:parentActivityName=".tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Movies.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity" />
+        </activity>
+        <activity
+            android:name=".tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Movies.Detail" />
+    </application>
+
+</manifest>
