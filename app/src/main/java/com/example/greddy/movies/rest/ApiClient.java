@@ -15,7 +15,7 @@ public class ApiClient {
     public static final String IMAGE_W300 = "https://image.tmdb.org/t/p/w300";
     public static final String IMAGE_W500 = "https://image.tmdb.org/t/p/w500";
     public static final String IMAGE_W780 = "https://image.tmdb.org/t/p/w780";
-    public static final String API_KEY = "YOUR_API_KEY";
+    public static final String API_KEY = "96b7ecf63547fd07ca415b5ff2651400";
 
     public static final String VIDEO_BASE_URL = "https://youtube.com/watch?v=";
     public static final String VIDEO_THUMBNAIL_URL = "http://i1.ytimg.com/vi/";
