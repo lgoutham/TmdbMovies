@@ -56,36 +56,31 @@ public class MovieFragment extends Fragment {
     }
 
     private void loadView(View view) {
-        int pageMargin = (int) (getResources().getDimension(R.dimen.global_default_dimen_20px));
-        int pagePadding = (int) (getResources().getDimension(R.dimen.global_default_dimen_20px));
+        int pageMargin = (int) (getResources().getDimension(R.dimen.global_default_dimen_12px));
 
         CardView mNowPlayingMoviesCardView = (CardView) view.findViewById(R.id.now_playing_movies_card_view);
         TextView mNowPlayingMoviesTextView = (TextView) mNowPlayingMoviesCardView.findViewById(R.id.card_view_movies_title);
         mNowPlayingMoviesTextView.setText(getResources().getString(R.string.now_playing));
         mNowPlayingViewPager = (ViewPager) mNowPlayingMoviesCardView.findViewById(R.id.card_view_movies_viewpager);
         mNowPlayingViewPager.setPageMargin(pageMargin);
-        mNowPlayingViewPager.setPadding(pagePadding, 0, pagePadding, 0);
 
         CardView mPopularMoviesCardView = (CardView) view.findViewById(R.id.most_popular_movies_card_view);
         TextView mPopularMoviesTextView = (TextView) mPopularMoviesCardView.findViewById(R.id.card_view_movies_title);
         mPopularMoviesTextView.setText(getResources().getString(R.string.most_popular));
         mPopularViewPager = (ViewPager) mPopularMoviesCardView.findViewById(R.id.card_view_movies_viewpager);
         mPopularViewPager.setPageMargin(pageMargin);
-        mPopularViewPager.setPadding(pagePadding, 0, pagePadding, 0);
 
         CardView mTopRatedMoviesCardView = (CardView) view.findViewById(R.id.top_rated_movies_card_view);
         TextView mTopRatedMoviesTextView = (TextView) mTopRatedMoviesCardView.findViewById(R.id.card_view_movies_title);
         mTopRatedMoviesTextView.setText(getResources().getString(R.string.top_rated));
         mTopRatedViewPager = (ViewPager) mTopRatedMoviesCardView.findViewById(R.id.card_view_movies_viewpager);
         mTopRatedViewPager.setPageMargin(pageMargin);
-        mTopRatedViewPager.setPadding(pagePadding, 0, pagePadding, 0);
 
         CardView mUpcomingMoviesCardView = (CardView) view.findViewById(R.id.upcoming_movies_card_view);
         TextView mUpcomingMoviesTextView = (TextView) mUpcomingMoviesCardView.findViewById(R.id.card_view_movies_title);
         mUpcomingMoviesTextView.setText(getResources().getString(R.string.upcoming));
         mUpcomingViewPager = (ViewPager) mUpcomingMoviesCardView.findViewById(R.id.card_view_movies_viewpager);
         mUpcomingViewPager.setPageMargin(pageMargin);
-        mUpcomingViewPager.setPadding(pagePadding, 0, pagePadding, 0);
     }
 
     private void loadMovies() {
