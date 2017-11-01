@@ -48,11 +48,9 @@ public class TvSeriesEpisodeImageFragment extends Fragment {
 
     private void loadView(View view) {
         ViewPager mImages = view.findViewById(R.id.tv_series_episode_images);
-        int pageMargin = (int) (getResources().getDimension(R.dimen.global_default_dimen_16px));
+        int pageMargin = (int) (getResources().getDimension(R.dimen.global_default_dimen_10px));
         mImages.setPageMargin(pageMargin);
 
-        int pagePadding = (int) (getResources().getDimension(R.dimen.global_default_dimen_25px));
-        mImages.setPadding(pagePadding, 0, pagePadding, 0);
         mTvSeriesEpisodeImageAdpater = new TvSeriesEpisodeImageAdpater(mContext);
         mImages.setAdapter(mTvSeriesEpisodeImageAdpater);
 
