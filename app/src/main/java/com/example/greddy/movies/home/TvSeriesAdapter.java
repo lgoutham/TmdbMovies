@@ -24,10 +24,10 @@ import static com.example.greddy.movies.home.TmdbActivity.TV_SERIES_ID;
  * Created by greddy on 7/18/2017.
  */
 
-public class TvSeriesAdapter extends PagerAdapter {
+class TvSeriesAdapter extends PagerAdapter {
 
-    private Context mContext;
-    private List<TvSeries> mTvSeriesList;
+    private final Context mContext;
+    private final List<TvSeries> mTvSeriesList;
 
     public TvSeriesAdapter(Context mContext, List<TvSeries> tvSeriesList) {
         this.mContext = mContext;
@@ -43,15 +43,12 @@ public class TvSeriesAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, final int position) {
         LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.list_item_movie, container, false);
-        final ImageView tvSeriesPoster = (ImageView) view.findViewById(R.id.movie_poster);
+        final ImageView tvSeriesPoster = view.findViewById(R.id.movie_poster);
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, TvSeriesDetailsActivity.class);
-                intent.putExtra(TV_SERIES_ID, mTvSeriesList.get(position).getId());
-                mContext.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, tvSeriesPoster, tvSeriesPoster.getTransitionName()).toBundle());
-            }
+        view.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, TvSeriesDetailsActivity.class);
+            intent.putExtra(TV_SERIES_ID, mTvSeriesList.get(position).getId());
+            mContext.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, tvSeriesPoster, tvSeriesPoster.getTransitionName()).toBundle());
         });
 
         String posterPath = ApiClient.IMAGE_W185 + mTvSeriesList.get(position).getPosterPath();

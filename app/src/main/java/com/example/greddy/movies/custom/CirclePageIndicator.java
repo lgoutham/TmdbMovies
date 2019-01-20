@@ -533,7 +533,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
         };
         int currentPage;
 
-        public SavedState(final Parcelable superState) {
+        SavedState(final Parcelable superState) {
             super(superState);
         }
 

@@ -11,9 +11,9 @@ import java.util.List;
  * Created by greddy on 8/8/2017.
  */
 
-public class TvSeriesEpisodeAdapter extends FragmentPagerAdapter {
+class TvSeriesEpisodeAdapter extends FragmentPagerAdapter {
 
-    private List<Fragment> mFragmentList = new ArrayList<>();
+    private final List<Fragment> mFragmentList = new ArrayList<>();
 
     public TvSeriesEpisodeAdapter(FragmentManager fm) {
         super(fm);

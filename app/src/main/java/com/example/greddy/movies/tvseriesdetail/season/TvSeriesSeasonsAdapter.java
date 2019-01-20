@@ -26,9 +26,9 @@ import static com.example.greddy.movies.tvseriesdetail.episode.TvSeriesEpisodeFr
  * Created by greddy on 8/3/2017.
  */
 
-public class TvSeriesSeasonsAdapter extends RecyclerView.Adapter {
+class TvSeriesSeasonsAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
+    private final Context mContext;
     private TvSeriesDetail mTvSeriesDetail;
     private ArrayList<Season> mSeasons;
 
@@ -60,22 +60,19 @@ public class TvSeriesSeasonsAdapter extends RecyclerView.Adapter {
         return mSeasons != null ? mSeasons.size() : 0;
     }
 
-    public class TvSeriesSeasonsViewHolder extends RecyclerView.ViewHolder {
+    class TvSeriesSeasonsViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView mPoster;
-        private TextView mSeason;
+        private final ImageView mPoster;
+        private final TextView mSeason;
 
-        public TvSeriesSeasonsViewHolder(View itemView) {
+        TvSeriesSeasonsViewHolder(View itemView) {
             super(itemView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(mContext, TvSeriesEpisodeDetailsActivity.class);
-                    intent.putExtra(SERIES_NUMBER, mTvSeriesDetail.getId());
-                    intent.putExtra(SEASON_NUMBER, mSeasons.get(getAdapterPosition()).getSeasonNumber());
-                    intent.putExtra(SEASON_NAME, mTvSeriesDetail.getName());
-                    mContext.startActivity(intent);
-                }
+            itemView.setOnClickListener(view -> {
+                Intent intent = new Intent(mContext, TvSeriesEpisodeDetailsActivity.class);
+                intent.putExtra(SERIES_NUMBER, mTvSeriesDetail.getId());
+                intent.putExtra(SEASON_NUMBER, mSeasons.get(getAdapterPosition()).getSeasonNumber());
+                intent.putExtra(SEASON_NAME, mTvSeriesDetail.getName());
+                mContext.startActivity(intent);
             });
             mPoster = itemView.findViewById(R.id.season_poster);
             mSeason = itemView.findViewById(R.id.season_no);

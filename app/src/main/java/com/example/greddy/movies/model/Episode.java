@@ -11,25 +11,25 @@ import java.util.List;
 public class Episode {
 
     @SerializedName("air_date")
-    private String airDate;
+    private final String airDate;
     @SerializedName("crew")
-    private List<Crew> crewList;
+    private final List<Crew> crewList;
     @SerializedName("episode_number")
-    private int episodeNumber;
+    private final int episodeNumber;
     @SerializedName("guest_stars")
-    private List<Stars> starsList;
+    private final List<Stars> starsList;
     @SerializedName("name")
-    private String name;
+    private final String name;
     @SerializedName("overview")
-    private String overview;
+    private final String overview;
     @SerializedName("id")
-    private int id;
+    private final int id;
     @SerializedName("still_path")
-    private String stillPath;
+    private final String stillPath;
     @SerializedName("vote_average")
-    private Float voteAverage;
+    private final Float voteAverage;
     @SerializedName("vote_count")
-    private int voteCount;
+    private final int voteCount;
 
     public Episode(String airDate, List<Crew> crewList, int episodeNumber, List<Stars> starsList, String name, String overview, int id, String stillPath, Float voteAverage, int voteCount) {
         this.airDate = airDate;

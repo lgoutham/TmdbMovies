@@ -63,25 +63,17 @@ public class MovieFilter extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
         View view = inflater.inflate(R.layout.movies_filter_activity, container, false);
-        mParentLayout = (RelativeLayout) view.findViewById(R.id.movies_filter_content);
-        mParentLayout = (RelativeLayout) view.findViewById(R.id.movies_filter_content);
+        mParentLayout = view.findViewById(R.id.movies_filter_content);
+        mParentLayout = view.findViewById(R.id.movies_filter_content);
         mParentLayout.setMinimumHeight(getResources().getDisplayMetrics().heightPixels / 2);
-        mViewPager = (ViewPager) view.findViewById(movie_filter_viewpager);
-        mTabLayout = (TabLayout) view.findViewById(R.id.movies_filter_tab);
-        mApplyFilters = (Button) view.findViewById(R.id.movie_apply_filter);
+        mViewPager = view.findViewById(movie_filter_viewpager);
+        mTabLayout = view.findViewById(R.id.movies_filter_tab);
+        mApplyFilters = view.findViewById(R.id.movie_apply_filter);
         setCancelable(false);
-        mCloseDialog = (ImageView) view.findViewById(R.id.movies_filter_close);
-        mCloseDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDialog.dismiss();
-            }
-        });
-        mApplyFilters.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mCloseDialog = view.findViewById(R.id.movies_filter_close);
+        mCloseDialog.setOnClickListener(v -> mDialog.dismiss());
+        mApplyFilters.setOnClickListener(v -> {
 
-            }
         });
 
         mMovieFilterAdapter = new MovieFilterAdapter(getChildFragmentManager());

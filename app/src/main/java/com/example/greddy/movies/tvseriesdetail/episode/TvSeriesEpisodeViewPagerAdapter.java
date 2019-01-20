@@ -18,10 +18,10 @@ import java.util.List;
  * Created by greddy on 8/4/2017.
  */
 
-public class TvSeriesEpisodeViewPagerAdapter extends PagerAdapter {
+class TvSeriesEpisodeViewPagerAdapter extends PagerAdapter {
 
-    private Context mContext;
-    private List<Episode> mEpisodeList;
+    private final Context mContext;
+    private final List<Episode> mEpisodeList;
 
     public TvSeriesEpisodeViewPagerAdapter(Context context, List<Episode> mEpisodeList){
         this.mContext = context;

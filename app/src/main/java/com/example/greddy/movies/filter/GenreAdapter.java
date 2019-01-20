@@ -17,9 +17,9 @@ import java.util.List;
  * Created by greddy on 7/14/2017.
  */
 
-public class GenreAdapter extends BaseAdapter {
+class GenreAdapter extends BaseAdapter {
 
-    private LayoutInflater mLayoutInflater;
+    private final LayoutInflater mLayoutInflater;
     private List<Genre> mGenreList;
 
     public GenreAdapter(Context context) {
@@ -52,8 +52,8 @@ public class GenreAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = mLayoutInflater.inflate(R.layout.genre_item, null);
             genreHolder = new GenreHolder();
-            genreHolder.mGenreImage = (ImageView) convertView.findViewById(R.id.genre_item_image);
-            genreHolder.mGenre = (TextView) convertView.findViewById(R.id.genre_item_text);
+            genreHolder.mGenreImage = convertView.findViewById(R.id.genre_item_image);
+            genreHolder.mGenre = convertView.findViewById(R.id.genre_item_text);
             convertView.setTag(genreHolder);
         } else {
             genreHolder = (GenreHolder) convertView.getTag();

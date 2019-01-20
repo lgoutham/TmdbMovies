@@ -24,9 +24,9 @@ import java.util.List;
  * Created by greddy on 8/7/2017.
  */
 
-public class TvSeriesVideosAdapter extends RecyclerView.Adapter {
+class TvSeriesVideosAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
+    private final Context mContext;
     private List<Video> mVideoList;
     private TvSeriesVideoViewHolder mTvSeriesVideoViewHolder;
 
@@ -67,12 +67,7 @@ public class TvSeriesVideosAdapter extends RecyclerView.Adapter {
                 viewHolder.mThumbnail.setImageDrawable(placeHolderDrawable);
             }
         });
-        viewHolder.mThumbnail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(videoPath)));
-            }
-        });
+        viewHolder.mThumbnail.setOnClickListener(view -> mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(videoPath))));
     }
 
     @Override
@@ -80,13 +75,13 @@ public class TvSeriesVideosAdapter extends RecyclerView.Adapter {
         return mVideoList != null ? mVideoList.size() : 0;
     }
 
-    public class TvSeriesVideoViewHolder extends RecyclerView.ViewHolder {
+    class TvSeriesVideoViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView mThumbnail;
-        private ImageView mPlayButtonCircle;
-        private ImageView mPlayButton;
+        private final ImageView mThumbnail;
+        private final ImageView mPlayButtonCircle;
+        private final ImageView mPlayButton;
 
-        public TvSeriesVideoViewHolder(View itemView) {
+        TvSeriesVideoViewHolder(View itemView) {
             super(itemView);
             mThumbnail = itemView.findViewById(R.id.tv_series_video_thumbnail);
             mPlayButton = itemView.findViewById(R.id.play_button);

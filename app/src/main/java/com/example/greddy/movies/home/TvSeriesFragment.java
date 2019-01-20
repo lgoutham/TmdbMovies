@@ -29,7 +29,7 @@ import retrofit2.Response;
 
 public class TvSeriesFragment extends Fragment {
 
-    public static final String TAG = TvSeriesFragment.class.getSimpleName();
+    private static final String TAG = TvSeriesFragment.class.getSimpleName();
 
     private ApiInterface mApiInterface;
     private Context mContext;
@@ -58,28 +58,28 @@ public class TvSeriesFragment extends Fragment {
     private void loadView(View view) {
         int pageMargin = (int) (getResources().getDimension(R.dimen.global_default_dimen_12px));
 
-        CardView airingTodayCardView = (CardView) view.findViewById(R.id.now_playing_movies_card_view);
-        TextView airingTodayTextView = (TextView) airingTodayCardView.findViewById(R.id.card_view_movies_title);
+        CardView airingTodayCardView = view.findViewById(R.id.now_playing_movies_card_view);
+        TextView airingTodayTextView = airingTodayCardView.findViewById(R.id.card_view_movies_title);
         airingTodayTextView.setText(getResources().getString(R.string.airing_today));
-        mAiringTodayViewPager = (ViewPager) airingTodayCardView.findViewById(R.id.card_view_movies_viewpager);
+        mAiringTodayViewPager = airingTodayCardView.findViewById(R.id.card_view_movies_viewpager);
         mAiringTodayViewPager.setPageMargin(pageMargin);
 
-        CardView mOnAirCardView = (CardView) view.findViewById(R.id.most_popular_movies_card_view);
-        TextView mOnAirTextView = (TextView) mOnAirCardView.findViewById(R.id.card_view_movies_title);
+        CardView mOnAirCardView = view.findViewById(R.id.most_popular_movies_card_view);
+        TextView mOnAirTextView = mOnAirCardView.findViewById(R.id.card_view_movies_title);
         mOnAirTextView.setText(getResources().getString(R.string.on_air));
-        mOnAirViewPager = (ViewPager) mOnAirCardView.findViewById(R.id.card_view_movies_viewpager);
+        mOnAirViewPager = mOnAirCardView.findViewById(R.id.card_view_movies_viewpager);
         mOnAirViewPager.setPageMargin(pageMargin);
 
-        CardView mPopularCardView = (CardView) view.findViewById(R.id.top_rated_movies_card_view);
-        TextView mPopularTextView = (TextView) mPopularCardView.findViewById(R.id.card_view_movies_title);
+        CardView mPopularCardView = view.findViewById(R.id.top_rated_movies_card_view);
+        TextView mPopularTextView = mPopularCardView.findViewById(R.id.card_view_movies_title);
         mPopularTextView.setText(getResources().getString(R.string.most_popular));
-        mPopularViewPager = (ViewPager) mPopularCardView.findViewById(R.id.card_view_movies_viewpager);
+        mPopularViewPager = mPopularCardView.findViewById(R.id.card_view_movies_viewpager);
         mPopularViewPager.setPageMargin(pageMargin);
 
-        CardView mTopRatedCardView = (CardView) view.findViewById(R.id.upcoming_movies_card_view);
-        TextView mTopRatedTextView = (TextView) mTopRatedCardView.findViewById(R.id.card_view_movies_title);
+        CardView mTopRatedCardView = view.findViewById(R.id.upcoming_movies_card_view);
+        TextView mTopRatedTextView = mTopRatedCardView.findViewById(R.id.card_view_movies_title);
         mTopRatedTextView.setText(getResources().getString(R.string.top_rated));
-        mTopRatedViewPager = (ViewPager) mTopRatedCardView.findViewById(R.id.card_view_movies_viewpager);
+        mTopRatedViewPager = mTopRatedCardView.findViewById(R.id.card_view_movies_viewpager);
         mTopRatedViewPager.setPageMargin(pageMargin);
     }
 

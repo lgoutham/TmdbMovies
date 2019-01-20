@@ -12,9 +12,9 @@ import java.util.List;
  * Created by greddy on 7/12/2017.
  */
 
-public class MovieFilterAdapter extends FragmentPagerAdapter {
+class MovieFilterAdapter extends FragmentPagerAdapter {
 
-    private List<Fragment> mFragmentList = new ArrayList<>();
+    private final List<Fragment> mFragmentList = new ArrayList<>();
 
     public MovieFilterAdapter(FragmentManager fm) {
         super(fm);

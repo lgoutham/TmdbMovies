@@ -26,8 +26,8 @@ import static com.example.greddy.movies.home.TmdbActivity.MOVIE_ID;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
 
-    private List<Movie> movies;
-    private Context mContext;
+    private final List<Movie> movies;
+    private final Context mContext;
 
     public MoviesAdapter(Context context, List<Movie> movies) {
         this.mContext = context;
@@ -42,13 +42,10 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
 
     @Override
     public void onBindViewHolder(final MovieViewHolder holder, final int position) {
-        holder.moviePoster.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, MovieDetailsActivity.class);
-                intent.putExtra(MOVIE_ID, movies.get(position).getId());
-                mContext.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, holder.moviePoster, holder.moviePoster.getTransitionName()).toBundle());
-            }
+        holder.moviePoster.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, MovieDetailsActivity.class);
+            intent.putExtra(MOVIE_ID, movies.get(position).getId());
+            mContext.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, holder.moviePoster, holder.moviePoster.getTransitionName()).toBundle());
         });
         String posterPath = ApiClient.IMAGE_W185 + movies.get(position).getPosterPath();
         Picasso.with(mContext).load(posterPath).into(holder.moviePoster);
@@ -61,9 +58,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
 
     public static class MovieViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView moviePoster;
+        final ImageView moviePoster;
 
-        public MovieViewHolder(View v) {
+        MovieViewHolder(View v) {
             super(v);
             moviePoster = v.findViewById(R.id.movie_poster);
         }

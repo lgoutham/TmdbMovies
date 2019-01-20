@@ -31,8 +31,8 @@ import retrofit2.Response;
 
 public class TmdbActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
-    public static final String TAG = TmdbActivity.class.getSimpleName();
-    public static final int SETTINGS_REQUEST_CODE = 1;
+    private static final String TAG = TmdbActivity.class.getSimpleName();
+    private static final int SETTINGS_REQUEST_CODE = 1;
     public static final String MOVIE_ID = "MOVIE_ID";
     public static final String TV_SERIES_ID = "TV_SERIES_ID";
     public static final int DEFAULT_ID = 0;
@@ -54,22 +54,19 @@ public class TmdbActivity extends AppCompatActivity implements SharedPreferences
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setUpSettingsPreferences();
-        mCoordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
-        mFilteredMovies = (RecyclerView) findViewById(R.id.filtered_movies_recycler_view);
+        mCoordinatorLayout = findViewById(R.id.coordinatorLayout);
+        mFilteredMovies = findViewById(R.id.filtered_movies_recycler_view);
 
-        TabLayout mTmdbTabLayout = (TabLayout) findViewById(R.id.tmdb_tab_layout);
-        mTmdbViewPager = (ViewPager) findViewById(R.id.tmdb_viewpager);
+        TabLayout mTmdbTabLayout = findViewById(R.id.tmdb_tab_layout);
+        mTmdbViewPager = findViewById(R.id.tmdb_viewpager);
         setViewPagerAdapter();
         mTmdbTabLayout.setupWithViewPager(mTmdbViewPager);
         mTmdbViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTmdbTabLayout));
 
-        FloatingActionButton mMoviesFilter = (FloatingActionButton) findViewById(R.id.movies_filter);
-        mMoviesFilter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mMovieFilterDialog = new MovieFilter();
-                mMovieFilterDialog.show(getSupportFragmentManager(), "MovieFilter");
-            }
+        FloatingActionButton mMoviesFilter = findViewById(R.id.movies_filter);
+        mMoviesFilter.setOnClickListener(v -> {
+            mMovieFilterDialog = new MovieFilter();
+            mMovieFilterDialog.show(getSupportFragmentManager(), "MovieFilter");
         });
     }
 
@@ -106,7 +103,7 @@ public class TmdbActivity extends AppCompatActivity implements SharedPreferences
             ShowNoNetworkDialog();
     }
 
-    public boolean isDeviceOnline() {
+    private boolean isDeviceOnline() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         boolean isDeviceOnline = networkInfo != null && networkInfo.isConnectedOrConnecting();
@@ -127,22 +124,14 @@ public class TmdbActivity extends AppCompatActivity implements SharedPreferences
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle(getResources().getString(R.string.no_network_title));
         alertDialogBuilder.setMessage(getResources().getString(R.string.no_network_message))
-                .setNegativeButton(getResources().getString(R.string.lbl_Ok), new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        mDialog.dismiss();
-                        finish();
-                    }
+                .setNegativeButton(getResources().getString(R.string.lbl_Ok), (dialog, which) -> {
+                    mDialog.dismiss();
+                    finish();
                 })
-                .setPositiveButton(getResources().getString(R.string.lbl_settings), new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
-                        startActivityForResult(intent, SETTINGS_REQUEST_CODE);
-                        mDialog.dismiss();
-                    }
+                .setPositiveButton(getResources().getString(R.string.lbl_settings), (dialog, which) -> {
+                    Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
+                    startActivityForResult(intent, SETTINGS_REQUEST_CODE);
+                    mDialog.dismiss();
                 })
                 .setCancelable(false);
         mDialog = alertDialogBuilder.create();
@@ -181,13 +170,7 @@ public class TmdbActivity extends AppCompatActivity implements SharedPreferences
         mFilteredMovies.setVisibility(View.GONE);
         this.mDoubleBackToExit = true;
 
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                mDoubleBackToExit = false;
-            }
-        }, 2000);
+        new Handler().postDelayed(() -> mDoubleBackToExit = false, 2000);
     }
 
     @Override

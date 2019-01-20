@@ -39,12 +39,12 @@ public class TvSeriesEpisodeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.tv_series_season_episode, container, false);
         mScrollView = view.findViewById(R.id.tv_series_episode_scrollview);
-        mEpisodeName = (TextView) view.findViewById(R.id.tv_season_episode_name);
-        mReleaseDate = (TextView) view.findViewById(R.id.tv_season_episode_release_date);
-        mRatingBar = (RatingBar) view.findViewById(R.id.tv_season_episode_ratingBar);
-        mNoOfRatings = (TextView) view.findViewById(R.id.tv_season_episode_no_of_ratings);
-        mOverview = (TextView) view.findViewById(R.id.tv_season_episode_overview);
-        ViewPager mEpisodeViewPager = (ViewPager) view.findViewById(R.id.tv_series_season_viewpager);
+        mEpisodeName = view.findViewById(R.id.tv_season_episode_name);
+        mReleaseDate = view.findViewById(R.id.tv_season_episode_release_date);
+        mRatingBar = view.findViewById(R.id.tv_season_episode_ratingBar);
+        mNoOfRatings = view.findViewById(R.id.tv_season_episode_no_of_ratings);
+        mOverview = view.findViewById(R.id.tv_season_episode_overview);
+        ViewPager mEpisodeViewPager = view.findViewById(R.id.tv_series_season_viewpager);
         int pageMargin = (int) (getResources().getDimension(R.dimen.global_default_dimen_16px));
         mEpisodeViewPager.setPageMargin(pageMargin);
 

@@ -18,9 +18,9 @@ import java.util.List;
  * Created by greddy on 8/7/2017.
  */
 
-public class TvSeriesImagesAdapter extends RecyclerView.Adapter {
+class TvSeriesImagesAdapter extends RecyclerView.Adapter {
 
-    private Context mContext;
+    private final Context mContext;
     private List<Image> mImages;
 
     public TvSeriesImagesAdapter(Context mContext) {
@@ -48,11 +48,11 @@ public class TvSeriesImagesAdapter extends RecyclerView.Adapter {
         this.notifyDataSetChanged();
     }
 
-    public class TvSeriesImageViewHolder extends RecyclerView.ViewHolder {
+    class TvSeriesImageViewHolder extends RecyclerView.ViewHolder {
 
-        private ImageView poster;
+        private final ImageView poster;
 
-        public TvSeriesImageViewHolder(View itemView) {
+        TvSeriesImageViewHolder(View itemView) {
             super(itemView);
             poster = itemView.findViewById(R.id.tv_series_image_item);
         }

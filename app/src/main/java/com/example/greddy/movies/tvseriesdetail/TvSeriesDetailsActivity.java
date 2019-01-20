@@ -36,7 +36,7 @@ import static com.example.greddy.movies.home.TmdbActivity.TV_SERIES_ID;
 
 public class TvSeriesDetailsActivity extends AppCompatActivity {
 
-    public static final String TAG = TvSeriesDetailsActivity.class.getSimpleName();
+    private static final String TAG = TvSeriesDetailsActivity.class.getSimpleName();
     private TvSeriesDetail mTvSeries;
     private ProgressBar mProgressBar;
 
@@ -50,17 +50,17 @@ public class TvSeriesDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tv_series_details_activity);
 
-        mToolbar = (Toolbar) findViewById(R.id.home_generic_detail_view_toolbar);
+        mToolbar = findViewById(R.id.home_generic_detail_view_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(null);
 
         getWindow().setSharedElementEnterTransition(TransitionInflater.from(this).inflateTransition(R.transition.curve));
-        final ImageView poster = (ImageView) findViewById(R.id.tv_series_details_poster);
-        mProgressBar = (ProgressBar) findViewById(R.id.tv_series_details_progressbar);
+        final ImageView poster = findViewById(R.id.tv_series_details_poster);
+        mProgressBar = findViewById(R.id.tv_series_details_progressbar);
 
-        TabLayout mTvDetailsTabLayout = (TabLayout) findViewById(R.id.tv_details_tab_layout);
-        mTvDetailsViewPager = (ViewPager) findViewById(R.id.tv_details_view_pager);
+        TabLayout mTvDetailsTabLayout = findViewById(R.id.tv_details_tab_layout);
+        mTvDetailsViewPager = findViewById(R.id.tv_details_view_pager);
 
         mTvDetailsTabLayout.setupWithViewPager(mTvDetailsViewPager);
         mTvDetailsViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTvDetailsTabLayout));

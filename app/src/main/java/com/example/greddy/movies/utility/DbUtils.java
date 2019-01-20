@@ -20,7 +20,7 @@ import static com.example.greddy.movies.database.TablesData.VOTE_COUNT;
  * Created by gautam on 1/11/17.
  */
 
-public class DbUtils {
+class DbUtils {
 
     public static long addMovie(Movie movie, Context context){
         DatabaseHelper databaseHelper = new DatabaseHelper(context);

@@ -24,10 +24,10 @@ import static com.example.greddy.movies.home.TmdbActivity.MOVIE_ID;
  * Created by greddy on 7/10/2017.
  */
 
-public class MovieAdapter extends PagerAdapter {
+class MovieAdapter extends PagerAdapter {
 
-    private Context mContext;
-    private List<Movie> mMovieList;
+    private final Context mContext;
+    private final List<Movie> mMovieList;
 
     public MovieAdapter(Context context, List<Movie> movieList) {
         this.mContext = context;
@@ -43,15 +43,12 @@ public class MovieAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, final int position) {
         LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.list_item_movie, container, false);
-        final ImageView moviePoster = (ImageView) view.findViewById(R.id.movie_poster);
+        final ImageView moviePoster = view.findViewById(R.id.movie_poster);
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, MovieDetailsActivity.class);
-                intent.putExtra(MOVIE_ID, mMovieList.get(position).getId());
-                mContext.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, moviePoster, moviePoster.getTransitionName()).toBundle());
-            }
+        view.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, MovieDetailsActivity.class);
+            intent.putExtra(MOVIE_ID, mMovieList.get(position).getId());
+            mContext.startActivity(intent, ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, moviePoster, moviePoster.getTransitionName()).toBundle());
         });
 
         String posterPath = ApiClient.IMAGE_W185 + mMovieList.get(position).getPosterPath();

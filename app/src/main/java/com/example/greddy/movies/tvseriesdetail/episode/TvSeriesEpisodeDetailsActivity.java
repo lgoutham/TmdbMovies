@@ -28,7 +28,7 @@ import static com.example.greddy.movies.tvseriesdetail.episode.TvSeriesEpisodeFr
 
 public class TvSeriesEpisodeDetailsActivity extends AppCompatActivity {
 
-    public static final String TAG = TvSeriesEpisodeDetailsActivity.class.getSimpleName();
+    private static final String TAG = TvSeriesEpisodeDetailsActivity.class.getSimpleName();
 
     private ViewPager mTvSeriesEpisodeViewPager;
     private SeasonResponse mSeasonResponse;
@@ -40,22 +40,17 @@ public class TvSeriesEpisodeDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tv_series_season_details_activity);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.home_series_season_toolbar);
+        Toolbar toolbar = findViewById(R.id.home_series_season_toolbar);
         setSupportActionBar(toolbar);
-        findViewById(R.id.tv_season_episode_close).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+        findViewById(R.id.tv_season_episode_close).setOnClickListener(view -> onBackPressed());
 
         mSeriesNo = getIntent().getIntExtra(SERIES_NUMBER, -1);
         mSeasonNo = getIntent().getIntExtra(SEASON_NUMBER, -1);
         String seriesName = getIntent().getStringExtra(SEASON_NAME);
         getSupportActionBar().setTitle(seriesName);
 
-        TabLayout mTvDetailsTabLayout = (TabLayout) findViewById(R.id.tv_details_tab_layout);
-        mTvSeriesEpisodeViewPager = (ViewPager) findViewById(R.id.tv_details_view_pager);
+        TabLayout mTvDetailsTabLayout = findViewById(R.id.tv_details_tab_layout);
+        mTvSeriesEpisodeViewPager = findViewById(R.id.tv_details_view_pager);
 
         mTvDetailsTabLayout.setupWithViewPager(mTvSeriesEpisodeViewPager);
         mTvSeriesEpisodeViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTvDetailsTabLayout));

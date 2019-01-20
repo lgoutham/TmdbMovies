@@ -21,7 +21,7 @@ import retrofit2.Response;
  * Created by greddy on 7/12/2017.
  */
 
-public class GenreFragment extends Fragment {
+class GenreFragment extends Fragment {
 
     public static final String TAG = GenreFragment.class.getSimpleName();
     private GenreAdapter mGenreAdapter;
@@ -30,7 +30,7 @@ public class GenreFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.genre_fragment_view, container, false);
         /*int[] mGenreImages = new int[]{R.drawable.video_player, R.drawable.gun, R.drawable.map, R.drawable.bear_face, R.drawable.theater_masks, R.drawable.knife, R.drawable.video_camera, R.drawable.pierrot, R.drawable.family};*/
-        GridView genreGrid = (GridView) view.findViewById(R.id.genre_view);
+        GridView genreGrid = view.findViewById(R.id.genre_view);
 
         ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
 

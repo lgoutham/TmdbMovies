@@ -38,7 +38,7 @@ import static com.example.greddy.movies.home.TmdbActivity.MOVIE_ID;
 
 public class MovieDetailsActivity extends AppCompatActivity {
 
-    public static final String TAG = MovieDetailsActivity.class.getSimpleName();
+    private static final String TAG = MovieDetailsActivity.class.getSimpleName();
     private Movie mMovie;
     private ImageView mPlayButtonCircle;
     private ImageView mPlayButton;
@@ -56,25 +56,25 @@ public class MovieDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_details_activity);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.home_generic_detail_view_toolbar);
+        Toolbar toolbar = findViewById(R.id.home_generic_detail_view_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(null);
 
         getWindow().setSharedElementEnterTransition(TransitionInflater.from(this).inflateTransition(R.transition.curve));
 
-        final ImageView poster = (ImageView) findViewById(R.id.movie_details_poster);
-        mPlayButtonCircle = (ImageView) findViewById(R.id.play_button_circle);
-        mPlayButton = (ImageView) findViewById(R.id.play_button);
-        mProgressBar = (ProgressBar) findViewById(R.id.movie_details_progressbar);
+        final ImageView poster = findViewById(R.id.movie_details_poster);
+        mPlayButtonCircle = findViewById(R.id.play_button_circle);
+        mPlayButton = findViewById(R.id.play_button);
+        mProgressBar = findViewById(R.id.movie_details_progressbar);
 
-        mPoster = (ImageView) findViewById(R.id.movie_detail_poster);
-        mTitle = (TextView) findViewById(R.id.movie_detail_title);
-        mReleaseDate = (TextView) findViewById(R.id.movie_detail_release_date);
-        mRatingBar = (RatingBar) findViewById(R.id.movie_detail_ratingBar);
-        mNoOfRatings = (TextView) findViewById(R.id.movie_detail_no_of_ratings);
-        mMovieOverview = (TextView) findViewById(R.id.movie_detail_overview);
-        mMovieGenre = (TextView) findViewById(R.id.movie_detail_genre);
+        mPoster = findViewById(R.id.movie_detail_poster);
+        mTitle = findViewById(R.id.movie_detail_title);
+        mReleaseDate = findViewById(R.id.movie_detail_release_date);
+        mRatingBar = findViewById(R.id.movie_detail_ratingBar);
+        mNoOfRatings = findViewById(R.id.movie_detail_no_of_ratings);
+        mMovieOverview = findViewById(R.id.movie_detail_overview);
+        mMovieGenre = findViewById(R.id.movie_detail_genre);
 
         int id = getIntent().getIntExtra(MOVIE_ID, DEFAULT_ID);
         ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);

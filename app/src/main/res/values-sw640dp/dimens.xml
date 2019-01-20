@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- default dimens * 1.25 -->
+<?xml version="1.0" encoding="utf-8"?><!-- default dimens * 1.25 -->
 <resources>
     <!-- global default dimens -->
     <dimen name="global_default_dimen_1px">1.25dp</dimen>
@@ -95,8 +94,4 @@
     <dimen name="global_default_text_39px">48.75sp</dimen>
     <dimen name="global_default_text_40px">50sp</dimen>
     <dimen name="global_default_text_41px">51.25sp</dimen>
-
-    <!-- ISplashView-->
-    <dimen name="splash_view_margin">18dp</dimen>
-    <dimen name="splash_view_padding">45dp</dimen>
 </resources>

@@ -18,9 +18,9 @@ import java.util.List;
  * Created by greddy on 8/8/2017.
  */
 
-public class TvSeriesEpisodeImageAdpater extends PagerAdapter {
+class TvSeriesEpisodeImageAdpater extends PagerAdapter {
 
-    private Context mContext;
+    private final Context mContext;
     private List<Image> mImages;
 
     public TvSeriesEpisodeImageAdpater(Context mContext) {
@@ -30,7 +30,7 @@ public class TvSeriesEpisodeImageAdpater extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.tv_series_episode_images_item_view, container, false);
-        final ImageView image = (ImageView) view.findViewById(R.id.tv_series_image_item);
+        final ImageView image = view.findViewById(R.id.tv_series_image_item);
         String posterPath = ApiClient.IMAGE_W780 + mImages.get(position).getFilePath();
         Picasso.with(mContext).load(posterPath).into(image);
 

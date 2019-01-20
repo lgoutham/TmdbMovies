@@ -11,9 +11,9 @@ import java.util.List;
  * Created by greddy on 7/18/2017.
  */
 
-public class TmdbAdapter extends FragmentPagerAdapter {
+class TmdbAdapter extends FragmentPagerAdapter {
 
-    private List<Fragment> mFragmentList = new ArrayList<>();
+    private final List<Fragment> mFragmentList = new ArrayList<>();
 
     public TmdbAdapter(FragmentManager fm) {
         super(fm);

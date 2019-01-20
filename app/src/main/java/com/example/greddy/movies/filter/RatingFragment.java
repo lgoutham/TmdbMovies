@@ -24,8 +24,8 @@ public class RatingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.rating_fragment_view, container, false);
-        final TextView seekValue = (TextView) view.findViewById(R.id.seek_bar_value);
-        SeekBar ratingSeekBar = (SeekBar) view.findViewById(R.id.seek_bar_rating);
+        final TextView seekValue = view.findViewById(R.id.seek_bar_value);
+        SeekBar ratingSeekBar = view.findViewById(R.id.seek_bar_rating);
         seekValue.setText(String.valueOf(ratingSeekBar.getProgress()));
         ratingSeekBar.incrementProgressBy((int)0.1);
         mSharedPreferencesEditor = container.getContext().getSharedPreferences(getString(R.string.movie_filter_shared_preferences), MODE_PRIVATE).edit();
