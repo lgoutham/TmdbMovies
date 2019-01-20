@@ -32,13 +32,13 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime:$rootProject.architectureVersion"
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.architectureVersion"
     implementation "androidx.room:room-runtime:$rootProject.roomVersion"
-    implementation "androidx.appcompat:appcompat:$rootProject.androidSupportVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.androidAppCompatVersion"
     implementation "com.google.android.material:material:$rootProject.androidMaterialVersion"
     implementation "androidx.recyclerview:recyclerview:$rootProject.androidSupportVersion"
     implementation "androidx.cardview:cardview:$rootProject.androidSupportVersion"
     implementation "androidx.palette:palette:$rootProject.androidSupportVersion"
     implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.retrofit2:retrofit:2.0.2'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
 }
