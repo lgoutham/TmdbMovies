@@ -23,7 +23,7 @@
             android:layout_margin="@dimen/global_default_dimen_8px"
             android:src="@drawable/ic_cross" />
 
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/movies_filter_tab"
             android:layout_width="match_parent"
             android:layout_height="@dimen/global_default_dimen_4px"
@@ -33,7 +33,7 @@
             app:tabGravity="center"
             app:tabMode="fixed" />
 
-        <android.support.v4.view.ViewPager
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/movie_filter_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

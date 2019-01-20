@@ -17,6 +17,13 @@ allprojects {
     }
 }
 
+ext {
+    architectureVersion = '2.1.0-alpha01'
+    androidSupportVersion = '1.0.0'
+    roomVersion = '2.1.0-alpha03'
+    androidMaterialVersion = '1.1.0-alpha02'
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

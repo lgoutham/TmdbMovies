@@ -1,7 +1,7 @@
 package com.example.greddy.movies.database;
 
-import android.arch.persistence.room.Database;
-import android.arch.persistence.room.RoomDatabase;
+import androidx.room.Database;
+import androidx.room.RoomDatabase;
 
 import com.example.greddy.movies.daos.MovieDa0;
 import com.example.greddy.movies.entities.Movie;
