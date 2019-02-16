@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <RelativeLayout
@@ -13,7 +14,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tv_details_tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/global_default_dimen_60px"
+            android:layout_height="?attr/actionBarSize"
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             app:tabContentStart="72dp"
@@ -26,8 +27,8 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/tv_details_view_pager"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@id/tv_details_tab_layout"
-            android:layout_height="1000dp"
             tools:showIn="@layout/tv_series_details_activity" />
 
     </RelativeLayout>

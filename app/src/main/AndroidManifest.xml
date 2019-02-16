@@ -42,15 +42,6 @@
                 android:value=".home.TmdbActivity" />
         </activity>
         <activity
-            android:name=".tvseriesdetail.episode.TvSeriesEpisodeFragment"
-            android:parentActivityName=".tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Movies.Detail">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity" />
-        </activity>
-        <activity
             android:name=".tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Movies.Detail" />

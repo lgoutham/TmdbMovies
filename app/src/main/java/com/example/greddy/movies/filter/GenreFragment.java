@@ -21,7 +21,7 @@ import retrofit2.Response;
  * Created by greddy on 7/12/2017.
  */
 
-class GenreFragment extends Fragment {
+public class GenreFragment extends Fragment {
 
     public static final String TAG = GenreFragment.class.getSimpleName();
     private GenreAdapter mGenreAdapter;

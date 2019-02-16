@@ -54,7 +54,7 @@ class TvSeriesVideosAdapter extends RecyclerView.Adapter {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                 viewHolder.mThumbnail.setImageBitmap(bitmap);
-//                setPlayButtonTintColor(bitmap);
+                setPlayButtonTintColor(bitmap);
             }
 
             @Override
