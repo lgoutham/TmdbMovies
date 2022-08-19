@@ -18,7 +18,7 @@ public class ApiClient {
     public static final String API_KEY = "Your Key";
 
     public static final String VIDEO_BASE_URL = "https://youtube.com/watch?v=";
-    public static final String VIDEO_THUMBNAIL_URL = "http://i1.ytimg.com/vi/";
+    public static final String VIDEO_THUMBNAIL_URL = "https://i1.ytimg.com/vi/";
     public static final String VIDEO_HQ_THUMBNAIL = "/hqdefault.jpg";
     public static final String VIDEO_NORMAL_THUMBNAIL = "/0.jpg";
 

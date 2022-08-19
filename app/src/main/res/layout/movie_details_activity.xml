@@ -47,8 +47,8 @@
 
                 <ImageView
                     android:id="@+id/play_button"
-                    android:layout_width="@dimen/global_default_dimen_60px"
-                    android:layout_height="@dimen/global_default_dimen_60px"
+                    android:layout_width="@dimen/global_default_dimen_30px"
+                    android:layout_height="@dimen/global_default_dimen_30px"
                     android:layout_centerInParent="true"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
