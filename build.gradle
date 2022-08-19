@@ -2,27 +2,20 @@
 
 buildscript {
     repositories {
-        jcenter()
+        gradlePluginPortal()
         google()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
     }
-}
-
-ext {
-    architectureVersion = '2.1.0-alpha01'
-    androidSupportVersion = '1.0.0'
-    androidAppCompatVersion = '1.0.2'
-    roomVersion = '2.1.0-alpha03'
-    androidMaterialVersion = '1.1.0-alpha02'
 }
 
 task clean(type: Delete) {

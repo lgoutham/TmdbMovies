@@ -14,7 +14,8 @@
         <activity
             android:name=".home.TmdbActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Movies">
+            android:theme="@style/Movies"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
