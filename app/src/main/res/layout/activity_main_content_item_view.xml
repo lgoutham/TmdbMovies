@@ -1,36 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/global_default_dimen_6px"
-    android:layout_marginEnd="@dimen/global_default_dimen_10px"
-    android:layout_marginStart="@dimen/global_default_dimen_10px"
-    android:layout_marginTop="@dimen/global_default_dimen_6px"
-    app:cardCornerRadius="@dimen/global_default_dimen_4px">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/card_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/global_default_dimen_16px"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/global_default_text_18px"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/airing_today" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/viewAll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/global_default_dimen_16px"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_baseline_navigate_next_24"
+        android:textSize="@dimen/global_default_text_16px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/card_view_movies_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/global_default_dimen_8px"
-            android:layout_marginEnd="@dimen/global_default_dimen_16px"
-            android:layout_marginStart="@dimen/global_default_dimen_16px"
-            android:layout_marginTop="@dimen/global_default_dimen_8px"
-            android:textAllCaps="true"
-            android:textStyle="bold" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/posterList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view_title" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/card_view_movies_viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/global_default_dimen_240px"
-            android:clipToPadding="false" />
-
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

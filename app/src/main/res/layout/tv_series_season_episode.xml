@@ -6,7 +6,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/tv_series_season_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/global_default_dimen_260px" />
+        android:layout_height="@dimen/global_default_dimen_300px" />
 
     <ScrollView
         android:id="@+id/tv_series_episode_scrollview"
@@ -22,9 +22,9 @@
                 android:id="@+id/tv_season_episode_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:layout_marginStart="@dimen/global_default_dimen_20px"
                 android:layout_marginTop="@dimen/global_default_dimen_10px"
+                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:maxLines="2"
                 android:textSize="@dimen/global_default_text_30px"
                 android:textStyle="bold" />
@@ -34,9 +34,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_season_episode_name"
-                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:layout_marginStart="@dimen/global_default_dimen_20px"
                 android:layout_marginTop="@dimen/global_default_dimen_10px"
+                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:textSize="@dimen/global_default_text_22px" />
 
             <RatingBar
@@ -45,9 +45,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_season_episode_release_date"
-                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:layout_marginStart="@dimen/global_default_dimen_20px"
                 android:layout_marginTop="@dimen/global_default_dimen_10px"
+                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:gravity="center|center_vertical"
                 android:isIndicator="true"
                 android:numStars="5"
@@ -58,9 +58,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_season_episode_release_date"
-                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:layout_marginStart="@dimen/global_default_dimen_20px"
                 android:layout_marginTop="@dimen/global_default_dimen_10px"
+                android:layout_marginEnd="@dimen/global_default_dimen_20px"
                 android:layout_toEndOf="@id/tv_season_episode_ratingBar"
                 android:textSize="@dimen/global_default_text_20px" />
 

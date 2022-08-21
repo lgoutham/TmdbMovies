@@ -5,8 +5,8 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorGreyLight"
-    tools:context=".home.TmdbActivity">
+    android:background="@color/colorAppBackground"
+    tools:context=".ui.home.TmdbActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -47,6 +47,7 @@
         android:transitionName="@string/app_name"
         app:elevation="@dimen/global_default_dimen_4px"
         app:fabSize="normal"
+        android:visibility="gone"
         app:layout_anchor="@id/tmdb_viewpager"
         app:layout_anchorGravity="bottom|end" />
 

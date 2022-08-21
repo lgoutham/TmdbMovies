@@ -14,7 +14,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tv_details_tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="@dimen/global_default_dimen_60px"
             android:layout_gravity="bottom"
             android:background="@color/colorPrimary"
             app:tabContentStart="72dp"

@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="@dimen/global_default_dimen_180px"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/global_default_dimen_16px"
     app:cardCornerRadius="@dimen/global_default_dimen_4px"
-    app:cardElevation="@dimen/global_default_dimen_4px">
+    app:cardElevation="0dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/season_poster"
-            android:layout_width="@dimen/global_default_dimen_140px"
-            android:layout_height="@dimen/global_default_dimen_220px"
+            android:layout_width="@dimen/global_default_dimen_180px"
+            android:layout_height="@dimen/global_default_dimen_240px"
             android:scaleType="fitXY" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/season_no"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/season_poster"
-            android:layout_alignStart="@+id/season_poster"
             android:layout_below="@id/season_poster"
             android:background="@color/colorPrimaryLight"
             android:gravity="start"

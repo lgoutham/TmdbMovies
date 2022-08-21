@@ -6,13 +6,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".TmdbApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Movies">
         <activity
-            android:name=".home.TmdbActivity"
+            android:name=".ui.home.TmdbActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Movies"
             android:exported="true">
@@ -23,27 +24,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".moviedetails.MovieDetailsActivity"
+            android:name=".ui.moviedetails.MovieDetailsActivity"
             android:label=""
-            android:parentActivityName=".home.TmdbActivity"
+            android:parentActivityName=".ui.home.TmdbActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Movies.Detail">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".home.TmdbActivity" />
+                android:value=".ui.home.TmdbActivity" />
         </activity>
 
         <activity
-            android:name=".tvseriesdetail.TvSeriesDetailsActivity"
-            android:parentActivityName=".home.TmdbActivity"
+            android:name=".ui.tvseriesdetail.TvSeriesDetailsActivity"
+            android:parentActivityName=".ui.home.TmdbActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Movies.Detail">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".home.TmdbActivity" />
+                android:value=".ui.home.TmdbActivity" />
         </activity>
         <activity
-            android:name=".tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity"
+            android:name=".ui.tvseriesdetail.episode.TvSeriesEpisodeDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Movies.Detail" />
     </application>
